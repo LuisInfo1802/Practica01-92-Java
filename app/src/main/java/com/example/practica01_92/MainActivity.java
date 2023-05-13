@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnPulsar;
     private EditText txtNombre;
     private TextView lblSaludar;
+    private Button btnCerrar;
+
 
     private Button btnLimpiar;
     @Override
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         txtNombre= (EditText) findViewById(R.id.txtNombre);
         lblSaludar=(TextView) findViewById(R.id.lblSaludo);
         btnLimpiar=(Button) findViewById(R.id.btnLimpiar);
+        btnCerrar=(Button) findViewById(R.id.btnCerrar);
 
         //Codificar el evento clic del Boton
         btnPulsar.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 //Validamos el limpiar
                 txtNombre.setText("");
                 lblSaludar.setText("::");
+            }
+        });
+
+        btnCerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               finish();
             }
         });
 
