@@ -41,6 +41,23 @@
             android:text="Oprime Aqui">
 
         </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLimpiar"
+            android:text="Limpiar Texto">
+
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCerrar"
+            android:text="Cerrar App">
+
+        </Button>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

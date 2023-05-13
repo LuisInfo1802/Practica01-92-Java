@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtNombre;
     private TextView lblSaludar;
 
+    private Button btnLimpiar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         btnPulsar= (Button) findViewById(R.id.btnSaludar);
         txtNombre= (EditText) findViewById(R.id.txtNombre);
         lblSaludar=(TextView) findViewById(R.id.lblSaludo);
+        btnLimpiar=(Button) findViewById(R.id.btnLimpiar);
 
         //Codificar el evento clic del Boton
         btnPulsar.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +46,18 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnLimpiar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Validamos el limpiar
+                txtNombre.setText("");
+                lblSaludar.setText("::");
+            }
+        });
+
+
+
 
     }
 }
